@@ -26,7 +26,7 @@ jobs:
       uses: neenjaw/compile-mermaid-markdown-action@master
       with:
         files: ${{ steps.getfile.outputs.files }}
-        output: 'output/'
+        output: 'output'
 
     - name: show dirs
       run: |
