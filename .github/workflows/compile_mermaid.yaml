@@ -21,13 +21,13 @@ jobs:
     - name: echo output
       run: |
         echo ${{ steps.getfile.outputs.files }}
-    # - name: Install Dependencies
-    #   run: |
-    #     cd exercism_formatter
-    #     mix local.rebar --force
-    #     mix local.hex --force
-    #     mix deps.get
-    # - name: Run Tests
-      # run: |
-    #     cd exercism_formatter
-    #     mix test
+
+    - name: compile mermaid
+      uses: neenjaw/compile-mermaid-markdown-action@master
+      with:
+        files: ${{ steps.getfile.outputs.files }}
+        output: '.output/'
+
+    - name: show dirs
+      run: |
+        ls -alR
