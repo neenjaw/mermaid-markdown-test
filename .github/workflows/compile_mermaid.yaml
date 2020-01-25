@@ -1,0 +1,33 @@
+name: 'Compile Mermaid'
+
+on:
+  push:
+    paths:
+      - '**/*.md.mermaid'
+      # - '**/*.md'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: get changed files
+      id: getfile
+      run: |
+        echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | xargs)"
+
+    - name: echo output
+      run: |
+        echo ${{ steps.getfile.outputs.files }}
+    # - name: Install Dependencies
+    #   run: |
+    #     cd exercism_formatter
+    #     mix local.rebar --force
+    #     mix local.hex --force
+    #     mix deps.get
+    # - name: Run Tests
+      # run: |
+    #     cd exercism_formatter
+    #     mix test
