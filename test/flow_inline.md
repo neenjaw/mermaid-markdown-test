@@ -10,6 +10,17 @@ graph TD;
     C-->D;
     W-->D;
     E-->C;
+
 ```
 
 Goal: comment out the above, insert image ref
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+    W-->D;
+    E-->Z;
+```
