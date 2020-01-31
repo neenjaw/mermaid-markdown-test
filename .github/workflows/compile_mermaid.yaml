@@ -3,8 +3,8 @@ name: 'Compile Mermaid'
 on:
   push:
     paths:
-      - '**/*.md.mermaid'
-      # - '**/*.md'
+      - '**/*.mermaid'
+      - '**/*.md'
 
 jobs:
   build:
