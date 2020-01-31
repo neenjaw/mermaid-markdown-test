@@ -9,7 +9,7 @@ graph TD;
     B-->D;
     C-->D;
     W-->D;
-    E-->C;
+    E-->J;
 
 ```
 
