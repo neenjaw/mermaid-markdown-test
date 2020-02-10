@@ -30,9 +30,9 @@ jobs:
         files: ${{ steps.getfile.outputs.files }}
         output: 'output'
 
-    - name: show dirs
+    - name: show changes
       run: |
-        ls -lR
+        git status
 
     - name: Create Pull Request
       id: cpr
