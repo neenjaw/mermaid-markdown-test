@@ -29,6 +29,8 @@ jobs:
       with:
         files: ${{ steps.getfile.outputs.files }}
         output: 'output'
+      env:
+        HIDE_CODEBLOCKS: 1
 
     - name: show changes
       run: |
