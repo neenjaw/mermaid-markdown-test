@@ -10,7 +10,7 @@ graph TD;
     C-->D;
     W-->D;
     E-->S;
-    D-->B;
+    D-->T;
 ```
 
 Goal: comment out the above, insert image ref
