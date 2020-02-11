@@ -18,7 +18,7 @@ Goal: comment out the above, insert image ref
 ```mermaid
 graph TD;
     A-->B;
-    A-->C;
+    A-->F;
     B-->D;
     C-->D;
     W-->D;
