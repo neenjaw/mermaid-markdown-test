@@ -2,8 +2,6 @@
 
 Here is an inline mermaid file
 
-![~mermaid diagram 1~](../output/test_flow_inline-md-1.png)
-
 ```mermaid
 graph TD;
     A-->B;
@@ -11,13 +9,11 @@ graph TD;
     B-->D;
     C-->D;
     W-->D;
-    E-->X;
+    E-->P;
 
 ```
 
 Goal: comment out the above, insert image ref
-
-![~mermaid diagram 2~](../output/test_flow_inline-md-2.png)
 
 ```mermaid
 graph TD;
