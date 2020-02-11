@@ -9,13 +9,11 @@ graph TD;
     B-->D;
     C-->D;
     W-->D;
-    E-->Z;
+    E-->S;
 
 ```
 
 Goal: comment out the above, insert image ref
-
-![~mermaid diagram 2~](../output/test_flow_inline-md-2.png)
 
 ```mermaid
 graph TD;
