@@ -25,7 +25,7 @@ jobs:
         echo ${{ steps.getfile.outputs.files }}
 
     - name: compile mermaid
-      uses: neenjaw/compile-mermaid-markdown-action@update-cli-source
+      uses: neenjaw/compile-mermaid-markdown-action@0.2.0
       with:
         files: ${{ steps.getfile.outputs.files }}
         output: 'output'
