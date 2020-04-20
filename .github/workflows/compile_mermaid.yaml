@@ -31,6 +31,7 @@ jobs:
         output: 'output'
       env:
         HIDE_CODEBLOCKS: 1
+        ABSOLUTE_IMAGE_LINKS: 1
 
     - name: show changes
       run: |
