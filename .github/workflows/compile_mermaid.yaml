@@ -34,13 +34,14 @@ jobs:
 
     - name: show changes
       run: |
+        ls -R
         git status
 
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git commit -m "Add changed markdown" -a
+        git add -A && git commit -m "Add changed markdown and images"
 
     - name: Push changes
       uses: ad-m/github-push-action@master
