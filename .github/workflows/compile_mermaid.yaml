@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: check mmdc version
+      run: |
+        ./node_modules/.bin/mmdc -V
+
     - uses: actions/checkout@v2
       with:
         fetch-depth: 2
