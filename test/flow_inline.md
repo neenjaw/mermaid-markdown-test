@@ -4,7 +4,7 @@ Here is an inline mermaid file
 
 ```mermaid
 graph TD;
-    Learn --> How --> Git --> Works;
+    Learn --> How --> Git --> Works
 ```
 
 Goal: comment out the above, insert image ref
