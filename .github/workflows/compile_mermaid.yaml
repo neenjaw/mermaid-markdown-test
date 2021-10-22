@@ -16,10 +16,11 @@ jobs:
           fetch-depth: 2
       - name: get changed files
         id: getfile
-        run: |
-          echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep -e '.*\.md$' -e '.*\.mermaid$' | xargs)"
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+        run: |
+          echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep -e '.*\.md$' -e '.*\.mermaid$' | xargs)"
+
           
       - name: mermaid files changed
         run: |
@@ -41,6 +42,8 @@ jobs:
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v2
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: Add compiled mermaid
