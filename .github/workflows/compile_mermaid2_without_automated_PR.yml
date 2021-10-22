@@ -1,7 +1,9 @@
 name: 'Compile Mermaid in Markdown'
 
 on:
-  push:
+  pull_request:
+    branches:
+      - main
     paths:
       - '**/*.md'
 
@@ -30,7 +32,7 @@ jobs:
         env:
           HIDE_CODEBLOCKS: 1
           ABSOLUTE_IMAGE_LINKS: 1
-          OUTPUT_FILE_TYPE: "svg"
+          OUTPUT_FILE_TYPE: "png"
           ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
  
       - name: show changes
