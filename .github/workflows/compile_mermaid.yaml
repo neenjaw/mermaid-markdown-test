@@ -18,7 +18,9 @@ jobs:
         id: getfile
         run: |
           echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep -e '.*\.md$' -e '.*\.mermaid$' | xargs)"
-
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+          
       - name: mermaid files changed
         run: |
           echo ${{ steps.getfile.outputs.files }}
