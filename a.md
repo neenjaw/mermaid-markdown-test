@@ -24,6 +24,4 @@ graph BR
         end
 ```
 
-  Esto es un ejemplo, cuando comitead un .md .mermaid :) compila en teoria (mucha teoria)
- prueba
- :D
+  Esto es un ejemplo,
