@@ -1,7 +1,11 @@
 
 name: render-md-mermaid
 
-on: push
+on:
+  push:
+    paths:
+      - '**/*.mermaid'
+      - '**/*.md'
 
 jobs:
   render-md-mermaid:
@@ -10,12 +14,18 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
       - name: Render images for every Mermaid diagram in all Markdown files (*.md) in the repo
         uses: nielsvaneck/render-md-mermaid@v2
-
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+          
       - name: Commit rendered png and svg files
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           file_pattern: "*[.svg,.png]"
           commit_message: automatically rendered mermaid diagrams
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'          
